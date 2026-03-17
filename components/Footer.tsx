@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.brand}>
           <p className={styles.logo}>
-            <span className={styles.logoAccent}>BY</span>DAND
+            <span className={styles.logoAccent}>Prof</span> Gordon
           </p>
           <p className={styles.tagline}>
             Movimiento inteligente.<br />Cuerpos más saludables.
@@ -26,7 +26,7 @@ export default function Footer() {
             href="https://www.instagram.com/bydand_movimiento/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram de Bydand Movimiento"
+            aria-label="Instagram de Prof. Christofer Gordon"
             className={styles.socialLink}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <p>© {new Date().getFullYear()} Bydand Movimiento · Buenos Aires, Argentina</p>
+        <p>© {new Date().getFullYear()} Prof. Christofer Gordon · Buenos Aires, Argentina</p>
         <div className={styles.legal}>
           <a href="/terminos">Términos y Condiciones</a>
           <a href="/privacidad">Política de Privacidad</a>

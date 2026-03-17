@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <a href="#" className={styles.logo}>
-        <span className={styles.logoAccent}>BY</span>DAND
+        <span className={styles.logoAccent}>Prof</span> Gordon
       </a>
 
       <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
