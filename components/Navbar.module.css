@@ -8,17 +8,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 4rem;
-  transition: background 0.4s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+  transition: background 0.4s ease, padding 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.88);
+  background: rgba(244, 248, 242, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 1rem 4rem;
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
+/* Logo — mono font intencional (logotipo) */
 .logo {
   font-family: var(--font-mono);
   font-size: 1.1rem;
@@ -29,7 +31,7 @@
 }
 
 .logoAccent {
-  color: var(--accent);
+  color: var(--green-sage);
 }
 
 .links {
@@ -40,40 +42,48 @@
 }
 
 .links a {
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--text-secondary);
   transition: color 0.2s;
-  font-weight: 500;
 }
 
 .links a:hover {
-  color: var(--text-primary);
+  color: var(--green-dark);
 }
 
+/* CTA "Reservar cita" */
 .cta {
-  background: var(--accent) !important;
-  color: #0a0a0a !important;
-  padding: 0.55rem 1.4rem;
-  border-radius: var(--radius);
+  background: var(--green-dark) !important;
+  color: var(--text-inverse) !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
   font-weight: 600 !important;
-  letter-spacing: 0.08em;
-  transition: opacity 0.2s !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0 !important;
+  transition: background 0.2s, transform 0.2s !important;
 }
 
 .cta:hover {
-  opacity: 0.85;
-  color: #0a0a0a !important;
+  background: var(--green-dark-h) !important;
+  color: var(--text-inverse) !important;
+  transform: translateY(-1px);
 }
 
+/* Burger */
 .burger {
   display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
-  padding: 4px;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .burger span {
@@ -119,6 +129,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 99;
   }
   .links.open {
     opacity: 1;
@@ -126,5 +137,6 @@
   }
   .links a {
     font-size: 1.1rem;
+    color: var(--text-primary);
   }
 }

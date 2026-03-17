@@ -10,7 +10,8 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.MouseEvent) => {
+  /* Bug fix: onSubmit en <form> en lugar de onClick en <button> */
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
     setStatus('sending');
@@ -34,6 +35,7 @@ export default function Contact() {
   return (
     <section id="contacto" className={styles.section}>
       <div className={styles.container}>
+        {/* Info de contacto */}
         <div className={styles.info}>
           <p className={styles.eyebrow}>Contacto</p>
           <h2 className={styles.heading}>
@@ -70,12 +72,13 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Formulario */}
         <div className={styles.formWrap}>
           {status === 'sent' ? (
-            <div className={styles.success}>
+            <div className={styles.success} aria-live="polite">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden>
-                <circle cx="20" cy="20" r="20" fill="var(--accent-dim)" />
-                <path d="M12 20L17.5 25.5L28 15" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="20" cy="20" r="20" fill="var(--green-sage-dim)" />
+                <path d="M12 20L17.5 25.5L28 15" stroke="var(--green-sage)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <p className={styles.successTitle}>¡Mensaje enviado!</p>
               <p className={styles.successSub}>Te contactamos a la brevedad.</p>
@@ -84,7 +87,8 @@ export default function Contact() {
               </button>
             </div>
           ) : (
-            <div className={styles.form}>
+            /* Bug fix: <form> con onSubmit, no <div> con onClick */
+            <form className={styles.form} onSubmit={handleSubmit} noValidate>
               <div className={styles.row}>
                 <div className={styles.field}>
                   <label htmlFor="name" className={styles.label}>Nombre</label>
@@ -139,18 +143,18 @@ export default function Contact() {
                 />
               </div>
               {status === 'error' && (
-                <p className={styles.errorMsg}>
+                <p className={styles.errorMsg} role="alert">
                   Hubo un error al enviar. Por favor intentá de nuevo.
                 </p>
               )}
               <button
+                type="submit"
                 className={styles.submit}
-                onClick={handleSubmit}
                 disabled={status === 'sending'}
               >
-                {status === 'sending' ? 'Enviando...' : 'Enviar mensaje'}
+                {status === 'sending' ? 'Enviando...' : 'Enviar mensaje ↗'}
               </button>
-            </div>
+            </form>
           )}
         </div>
       </div>

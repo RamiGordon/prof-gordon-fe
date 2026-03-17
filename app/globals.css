@@ -1,25 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+/* ============================================================
+   DESIGN SYSTEM — Prof. Gordon / Bydand Movimiento
+   Referencia: Dribbble "Physiotherapy & Wellness"
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #111111;
-  --bg-card-hover: #181818;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(190, 255, 80, 0.3);
-  --text-primary: #f0ede6;
-  --text-secondary: #888;
-  --text-muted: #555;
-  --accent: #beff50;
-  --accent-dim: rgba(190, 255, 80, 0.15);
-  --accent-glow: rgba(190, 255, 80, 0.08);
-  --white: #fff;
-  --radius: 4px;
-  --radius-lg: 12px;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  /* ── Verdes estructurales ── */
+  --green-dark:    #1D3A24;
+  --green-dark-h:  #152C1A;
+  --green-sage:    #6DB36B;
+  --green-sage-bg: #EEF5EC;
+  --green-sage-dim: rgba(109, 179, 107, 0.15);
+
+  /* ── Fondos ── */
+  --bg:           #F4F8F2;   /* Base — off-white con tinte sage */
+  --bg-alt:       #EEF5EC;   /* Alternado — sage más pronunciado */
+  --bg-card:      #FFFFFF;
+  --bg-card-hover:#FAFDF9;
+
+  /* ── Texto ── */
+  --text-primary:  #1A1A1A;
+  --text-secondary:#4A5247;
+  --text-muted:    #8A9488;
+  --text-inverse:  #F4F8F2;
+
+  /* ── Bordes ── */
+  --border:        rgba(26, 58, 36, 0.10);
+  --border-strong: rgba(26, 58, 36, 0.18);
+  --border-accent: rgba(109, 179, 107, 0.35);
+
+  /* ── Semánticos ── */
+  --error:   #C0392B;
+  --success: #1D3A24;
+
+  /* ── Radios ── */
+  --radius:     8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 99px;
+
+  /* ── Sombras ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.05);
+
+  /* ── Tipografía ── */
+  --font-display: 'Lora', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'DM Mono', monospace;   /* Solo logo, años en timeline */
+
+  /* Alias de compatibilidad (para que no queden vars huérfanas) */
+  --accent:     var(--green-sage);
+  --accent-dim: var(--green-sage-dim);
+  --bg-card-bg: var(--bg-card);
 }
 
+/* ── Reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -35,15 +72,23 @@ body {
   background: var(--bg);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.7;
+  font-weight: 400;
+  line-height: 1.75;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── Selección de texto ── */
 ::selection {
-  background: var(--accent);
-  color: #0a0a0a;
+  background: var(--green-sage-dim);
+  color: var(--green-dark);
+}
+
+/* ── Focus visible global (accesibilidad) ── */
+:focus-visible {
+  outline: 2px solid var(--green-sage);
+  outline-offset: 3px;
+  border-radius: var(--radius);
 }
 
 a {
@@ -61,7 +106,7 @@ button {
   font-family: var(--font-body);
 }
 
-/* Scrollbar */
+/* ── Scrollbar ── */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -69,11 +114,11 @@ button {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
+  background: var(--border-strong);
   border-radius: 2px;
 }
 
-/* Fade-in animation utility */
+/* ── Animaciones ── */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -87,12 +132,12 @@ button {
 
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes lineGrow {
-  from { scaleX: 0; }
-  to { scaleX: 1; }
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
 .animate-fade-up {

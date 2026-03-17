@@ -66,15 +66,16 @@ export default function Plans() {
               <ul className={styles.features}>
                 {plan.features.map((f) => (
                   <li key={f} className={styles.feature}>
+                    {/* stroke="currentColor" — hereda color sage desde CSS */}
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-                      <path d="M2 7L5.5 10.5L12 3.5" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M2 7L5.5 10.5L12 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     {f}
                   </li>
                 ))}
               </ul>
               <a href="#contacto" className={styles.cardCta}>
-                Reservar cita
+                Reservar cita ↗
               </a>
             </article>
           ))}
@@ -92,7 +93,7 @@ export default function Plans() {
           <div className={styles.methodPillars}>
             {['Evaluación inicial', 'Programación progresiva', 'Métricas objetivas', 'Impacto comprobable'].map((p) => (
               <div key={p} className={styles.pillar}>
-                <span className={styles.pillarNum} />
+                <span className={styles.pillarNum} aria-hidden />
                 {p}
               </div>
             ))}

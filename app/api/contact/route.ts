@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
       subject: `Nueva consulta de ${name}${lastName ? ' ' + lastName : ''}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f9f9; border-radius: 8px;">
-          <h2 style="color: #0a0a0a; margin-bottom: 8px;">Nueva consulta desde bydand.com</h2>
+          <h2 style="color: #1D3A24; margin-bottom: 8px;">Nueva consulta desde bydand.com</h2>
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin-bottom: 24px;" />
 
           <table style="width: 100%; border-collapse: collapse;">
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
             </tr>
           </table>
 
-          <div style="margin-top: 24px; padding: 20px; background: #fff; border-radius: 6px; border-left: 3px solid #beff50;">
+          <div style="margin-top: 24px; padding: 20px; background: #fff; border-radius: 6px; border-left: 3px solid #6DB36B;">
             <p style="font-size: 13px; color: #666; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">Mensaje</p>
             <p style="font-size: 15px; color: #111; line-height: 1.7; white-space: pre-wrap;">${message}</p>
           </div>

@@ -21,8 +21,15 @@ export default function About() {
               'Simulación Clínica Avanzada · FCM-UNLP',
             ].map((c) => (
               <span key={c} className={styles.cert}>
+                {/* Checkmark accesible — stroke="currentColor" hereda color sage del CSS */}
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
-                  <circle cx="5" cy="5" r="5" fill="var(--accent)" />
+                  <path
+                    d="M1.5 5L3.5 7L8.5 2"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
                 {c}
               </span>

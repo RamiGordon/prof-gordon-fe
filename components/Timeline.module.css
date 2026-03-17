@@ -1,6 +1,6 @@
 .section {
   padding: 8rem 4rem;
-  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
 }
 
 .container {
@@ -12,19 +12,21 @@
   margin-bottom: 5rem;
 }
 
+/* Eyebrow */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--green-sage);
   margin-bottom: 1rem;
 }
 
 .heading {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -33,8 +35,8 @@
 
 .heading em {
   font-style: italic;
-  font-weight: 400;
-  color: var(--text-secondary);
+  font-weight: 600;
+  color: var(--green-sage);
 }
 
 .sub {
@@ -48,7 +50,6 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .item {
@@ -64,12 +65,13 @@
   padding-top: 0.15rem;
 }
 
+/* Año — mono font correcto para datos numéricos */
 .year {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  font-size: 0.82rem;
   font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--green-dark);
 }
 
 .connector {
@@ -83,14 +85,14 @@
   height: 10px;
   border-radius: 50%;
   background: var(--bg-card);
-  border: 1.5px solid var(--accent);
+  border: 2px solid var(--green-dark);
   flex-shrink: 0;
   margin-top: 0.2rem;
   transition: background 0.2s;
 }
 
 .item:hover .dot {
-  background: var(--accent);
+  background: var(--green-dark);
 }
 
 .line {
@@ -100,16 +102,23 @@
   background: linear-gradient(to bottom, var(--border-accent), var(--border));
 }
 
+/* El último item no tiene línea — se oculta con min-height */
+.item:last-child .line {
+  display: none;
+}
+
 .content {
   padding-bottom: 3rem;
 }
 
+/* Organización — Inter uppercase (no mono) */
 .org {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--green-sage);
   display: block;
   margin-bottom: 0.4rem;
 }
@@ -117,7 +126,7 @@
 .title {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
   line-height: 1.3;
@@ -138,6 +147,6 @@
     gap: 0 1rem;
   }
   .year {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
   }
 }

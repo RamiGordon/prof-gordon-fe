@@ -1,5 +1,6 @@
+/* Footer oscuro — cierre visual fuerte, contrasta con el body claro */
 .footer {
-  border-top: 1px solid var(--border);
+  background: var(--green-dark);
   padding: 4rem 4rem 2rem;
 }
 
@@ -10,29 +11,32 @@
   grid-template-columns: 1.5fr 1fr 1.5fr;
   gap: 4rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(244, 248, 242, 0.12);
 }
 
+/* Logo — mono font intencional */
 .logo {
   font-family: var(--font-mono);
   font-size: 1.2rem;
   letter-spacing: 0.18em;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-inverse);
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
 
 .logoAccent {
-  color: var(--accent);
+  color: var(--green-sage);
 }
 
 .tagline {
+  font-family: var(--font-body);
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: rgba(244, 248, 242, 0.55);
   line-height: 1.7;
 }
 
+/* Nav */
 .nav {
   display: flex;
   flex-direction: column;
@@ -40,16 +44,19 @@
 }
 
 .nav a {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: rgba(244, 248, 242, 0.70);
   transition: color 0.2s;
 }
 
 .nav a:hover {
-  color: var(--accent);
+  color: var(--text-inverse);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
+/* Social */
 .social {
   display: flex;
   flex-direction: column;
@@ -60,15 +67,17 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: rgba(244, 248, 242, 0.70);
   transition: color 0.2s;
 }
 
 .socialLink:hover {
-  color: var(--accent);
+  color: var(--text-inverse);
 }
 
+/* Bottom bar */
 .bottom {
   max-width: 1200px;
   margin: 0 auto;
@@ -81,10 +90,9 @@
 }
 
 .bottom p {
+  font-family: var(--font-body);
   font-size: 0.78rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  letter-spacing: 0.04em;
+  color: rgba(244, 248, 242, 0.40);
 }
 
 .legal {
@@ -93,13 +101,14 @@
 }
 
 .legal a {
+  font-family: var(--font-body);
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: rgba(244, 248, 242, 0.40);
   transition: color 0.2s;
 }
 
 .legal a:hover {
-  color: var(--text-secondary);
+  color: rgba(244, 248, 242, 0.70);
 }
 
 @media (max-width: 900px) {

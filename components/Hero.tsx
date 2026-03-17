@@ -3,12 +3,9 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgGrid} aria-hidden />
-      <div className={styles.bgGlow} aria-hidden />
-
+      {/* Contenido de texto — primero en DOM para mobile */}
       <div className={styles.inner}>
         <div className={styles.tag}>
-          <span className={styles.dot} />
           Salud cardiometabólica · Movimiento funcional
         </div>
 
@@ -26,7 +23,7 @@ export default function Hero() {
 
         <div className={styles.actions}>
           <a href="#contacto" className={styles.btnPrimary}>
-            Reservar una cita
+            Reservar una cita ↗
           </a>
           <a href="#sobre" className={styles.btnSecondary}>
             Conocé al Prof. Gordon →
@@ -47,6 +44,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Columna de imagen — segundo en DOM, aparece a la derecha en desktop */}
       <div className={styles.imageCol}>
         <div className={styles.imageFrame}>
           {/* eslint-disable-next-line @next/next/no-img-element */}

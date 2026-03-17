@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Programas de movimiento personalizados centrados en la salud cardiometabólica.',
     type: 'website',
   },
+  other: {
+    'theme-color': '#1D3A24',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

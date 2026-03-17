@@ -68,14 +68,15 @@ export default function Timeline() {
         </div>
 
         <div className={styles.timeline}>
-          {milestones.map((m, i) => (
-            <div key={i} className={styles.item}>
+          {milestones.map((m) => (
+            /* key estable basada en contenido, no en índice */
+            <div key={`${m.year}-${m.title}`} className={styles.item}>
               <div className={styles.yearCol}>
                 <span className={styles.year}>{m.year}</span>
               </div>
               <div className={styles.connector}>
                 <div className={styles.dot} />
-                {i < milestones.length - 1 && <div className={styles.line} />}
+                <div className={styles.line} />
               </div>
               <div className={styles.content}>
                 <span className={styles.org}>{m.org}</span>
