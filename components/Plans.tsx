@@ -4,7 +4,7 @@ const plans = [
   {
     id: 'presencial',
     tag: 'Presencial',
-    title: 'Una vez por semana',
+    title: 'Sesión presencial',
     description:
       'Sesión semanal presencial con evaluación inicial, programa de movimiento personalizado y seguimiento de métricas objetivas y subjetivas.',
     features: [
