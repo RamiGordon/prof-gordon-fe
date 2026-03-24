@@ -20,6 +20,12 @@ const milestones = [
     desc: 'Instructorado en reanimación cardiopulmonar, desobstrucción de vía aérea y uso de DEA en adultos.',
   },
   {
+    year: '2019',
+    title: 'Simulación Clínica Básica',
+    org: 'FCM — UNLP',
+    desc: 'Curso de Formadores en Enseñanza Basada en Simulación Clínica Básica.',
+  },
+  {
     year: '2022',
     title: 'Posgrado en Cardiología del Ejercicio',
     org: 'Sociedad Argentina de Cardiología',

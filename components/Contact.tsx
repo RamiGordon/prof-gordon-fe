@@ -61,12 +61,12 @@ export default function Contact() {
             <div className={styles.detail}>
               <span className={styles.detailLabel}>Instagram</span>
               <a
-                href="https://www.instagram.com/bydand_movimiento/"
+                href="https://www.instagram.com/prof.gordon_movimiento/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.detailValue}
               >
-                @bydand_movimiento
+                @prof.gordon_movimiento
               </a>
             </div>
           </div>

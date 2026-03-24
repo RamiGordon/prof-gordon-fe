@@ -51,8 +51,8 @@ export default function About() {
             en el Hospital Universitario Integrado de la Facultad de Ciencias Médicas.
           </p>
           <p className={styles.body}>
-            Con posgrados en <strong>cardiología del ejercicio</strong>, diabetes,
-            obesidad y simulación clínica avanzada, trabajo en rehabilitación
+            Con posgrados en <strong>cardiología del ejercicio</strong>, <strong>diabetes</strong>,{' '}
+            <strong>obesidad</strong> y simulación clínica avanzada, trabajo en rehabilitación
             cardiovascular, e integrando el comité de docencia e investigación
             de un Hospital especializado en rehabilitación.
           </p>
