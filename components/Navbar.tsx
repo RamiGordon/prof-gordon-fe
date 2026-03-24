@@ -13,7 +13,7 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: '#sobre', label: 'Sobre Gordon' },
+    { href: '#sobre', label: 'Sobre Prof. Gordon' },
     { href: '#planes', label: 'Planes' },
     { href: '#formacion', label: 'Formación' },
     { href: '#contacto', label: 'Contacto' },

@@ -18,6 +18,7 @@ export default function About() {
               'UNLP · Profesor en Educación Física',
               'Cardiología del Ejercicio · SAC',
               'Diabetes y Ejercicio · SAD',
+              'Obesidad y Comorbilidades Asociadas · FCM-UNLP',
               'Simulación Clínica Avanzada · FCM-UNLP',
             ].map((c) => (
               <span key={c} className={styles.cert}>
@@ -38,7 +39,6 @@ export default function About() {
         </div>
 
         <div className={styles.content}>
-          <p className={styles.eyebrow}>¿Quién es?</p>
           <h2 className={styles.heading}>
             Hola, soy<br />
             <em>Christofer Gordon</em>
@@ -46,18 +46,20 @@ export default function About() {
 
           <p className={styles.body}>
             Egresado de la <strong>Universidad Nacional de La Plata</strong> como
-            Profesor en Educación Física. Docente universitario en la facultad donde
-            me formé, e instructor de RCP, DEA y desobstrucción de vía aérea en el
-            Hospital Universitario Integrado.
+            Profesor en Educación Física. Docente universitario con mas de 10 años
+            de experiencia, instructor de RCP, DEA y desobstrucción de vía aérea
+            en el Hospital Universitario Integrado de la Facultad de Ciencias Médicas.
           </p>
           <p className={styles.body}>
             Con posgrados en <strong>cardiología del ejercicio</strong>, diabetes,
             obesidad y simulación clínica avanzada, trabajo en rehabilitación
-            cardiovascular integrando el comité de docencia e investigación.
+            cardiovascular, e integrando el comité de docencia e investigación
+            de un Hospital especializado en rehabilitación.
           </p>
           <p className={styles.body}>
-            He presentado trabajos en congresos nacionales e internacionales, coordinado
-            paneles y organizado jornadas de salud y educación dentro y fuera de Argentina.
+            He presentado trabajos en congresos nacionales e internacionales y en revistas
+            académicas y de divulgación. He coordinado paneles, dado talleres dentro y fuera
+            de Argentina, y organizado jornadas vinculadas a la salud y la educación.
           </p>
 
           <blockquote className={styles.quote}>
