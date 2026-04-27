@@ -37,8 +37,8 @@ export default function Hero() {
         <div className={styles.imageFrame}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/hero.avif"
-            alt="Prof. Gordon"
+            src="/images/heroHexagonos1.png"
+            alt="Síndrome Metabólico"
             className={styles.heroImage}
           />
           <div className={styles.imageBadge}>
