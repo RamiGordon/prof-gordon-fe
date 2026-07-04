@@ -32,21 +32,16 @@ export default function Hero() {
 
       </div>
 
-      {/* Columna de imagen — segundo en DOM, aparece a la derecha en desktop */}
+      {/* Columna imagen */}
       <div className={styles.imageCol}>
-        <div className={styles.imageFrame}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/hero.avif"
-            alt="Prof. Gordon"
-            className={styles.heroImage}
-          />
-          <div className={styles.imageBadge}>
-            <span>Prof. en Ed. Física</span>
-            <span className={styles.badgeSub}>UNLP · Buenos Aires</span>
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/heroBg.png"
+          alt="Síndrome Metabólico"
+          className={styles.heroImage}
+        />
       </div>
+
     </section>
   );
 }
