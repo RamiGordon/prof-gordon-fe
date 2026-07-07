@@ -8,7 +8,7 @@ export default function About() {
           <div className={styles.imageWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://static.wixstatic.com/media/d8c902_22e82ae853794421a5700bb70c5ffcca~mv2.png/v1/fill/w_335,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d8c902_22e82ae853794421a5700bb70c5ffcca~mv2.png"
+              src="/images/christopher.png"
               alt="Christofer Gordon"
               className={styles.portrait}
             />
@@ -49,6 +49,7 @@ export default function About() {
             Profesor en Educación Física. Docente universitario con mas de 10 años
             de experiencia, instructor de RCP, DEA y desobstrucción de vía aérea
             en el Hospital Universitario Integrado de la Facultad de Ciencias Médicas.
+            Miembro adherente de la <strong>SIAC (Sociedad Interamericana de Cardiología)</strong>.
           </p>
           <p className={styles.body}>
             Con posgrados en <strong>cardiología del ejercicio</strong>, <strong>diabetes</strong>,{' '}
